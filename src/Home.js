@@ -19,7 +19,7 @@ import {
   TableSortLabel,
   useMediaQuery,
   useTheme,
-  Snackbar, // Import Snackbar component
+  Snackbar, 
 } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
 
@@ -27,7 +27,7 @@ const Home = () => {
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
   const [sortConfig, setSortConfig] = useState({
     key: "title",
     direction: "asc",
@@ -238,7 +238,7 @@ const Home = () => {
           onChange={handleChangePage}
           variant="outlined"
           shape="rounded"
-          size="large"
+          size="small"  // Changed this line to make the pagination numbers smaller
           color="primary"
         />
       </Box>
